@@ -1,7 +1,7 @@
 import asyncio
 
 from google.adk import Runner
-from agents.orchestrator import OrchestratorAgent
+from agents.root_agent import root_app, root_session_service
 from agents.proactive_coach import ProactiveCoachAgent
 from agents.symptom_triage import SymptomTriageAgent
 from utils import Utils
@@ -9,7 +9,7 @@ from utils import Utils
 
 class Main:
     def __init__(self):
-        self.orchestrator_agent = OrchestratorAgent()
+        self.orchestrator_app = root_app
         self.symptom_triage_agent = SymptomTriageAgent()
         self.proactive_coach_agent = ProactiveCoachAgent()
 
@@ -23,8 +23,8 @@ class Main:
             if input_query == "exit":
                 break
             runner = Runner(
-                app=self.orchestrator_agent.app,
-                session_service=self.orchestrator_agent.session_service,
+                app=self.orchestrator_app,
+                session_service=root_session_service,
             )
             await Utils.run_session(
                 runner,
