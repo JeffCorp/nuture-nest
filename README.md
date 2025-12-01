@@ -328,14 +328,18 @@ python tests/test_scenarios.py
 - Multi-language support
 - Analytics and performance tracking
 - Follow-up questions after urgent symptoms
+- Voice integrations for easier interaction
+- Trimester specific check-ins with symptoms and possible anticipated bodily changes
 
 ## License
 
-[Specify your license]
+MIT
 
-## Contact
+## Contacts
 
-[Your contact information]
+jeffukus@gmail.com
+olaniyidan14@gmail.com
+moyosoreabiodunn@gmail.com
 
 ---
 
