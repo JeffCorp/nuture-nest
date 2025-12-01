@@ -35,9 +35,7 @@ class ProactiveCoachAgent:
         tools_list = []
 
         try:
-            brave_api_key = os.environ.get(
-                "BRAVE_API_KEY", "BSAQyVTZEc_aZaeyoQb3i9Vb1HhfWsV"
-            )
+            brave_api_key = os.environ.get("BRAVE_API_KEY")
             brave_mcp_tool = MCPToolset(
                 connection_params=StdioConnectionParams(
                     server_params=StdioServerParameters(

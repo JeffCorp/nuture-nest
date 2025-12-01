@@ -33,7 +33,6 @@ from google.adk.runners import InMemoryRunner
 import dotenv
 
 from utils import Utils
-from mcp_tools.calendar_tool import CalendarTool
 
 # Initialize email tool from environment variables
 # Credentials should be in config/.env as GMAIL_EMAIL and GMAIL_APP_PASSWORD
@@ -71,9 +70,7 @@ class SymptomTriageAgent:
 
         # Try to add MCP tool for web search (optional)
         try:
-            brave_api_key = os.environ.get(
-                "BRAVE_API_KEY", "BSAQyVTZEc_aZaeyoQb3i9Vb1HhfWsV"
-            )
+            brave_api_key = os.environ.get("BRAVE_API_KEY")
             brave_mcp_tool = MCPToolset(
                 connection_params=StdioConnectionParams(
                     server_params=StdioServerParameters(
